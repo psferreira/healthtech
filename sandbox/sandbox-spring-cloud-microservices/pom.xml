@@ -12,8 +12,8 @@
     <modules>
         <module>sandbox-spring-cloud-microservices-discovery-service</module>
         <module>sandbox-spring-cloud-microservices-account-service</module>
-        <module>sandbox-spring-cloud-microservices-gateway-service</module>
         <module>sandbox-spring-cloud-microservices-customer-service</module>
+        <module>sandbox-spring-cloud-microservices-gateway-service</module>
     </modules>
 
 </project>
