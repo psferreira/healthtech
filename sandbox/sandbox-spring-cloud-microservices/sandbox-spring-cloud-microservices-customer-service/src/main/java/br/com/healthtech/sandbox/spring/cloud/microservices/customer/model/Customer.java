@@ -1,6 +1,7 @@
 package br.com.healthtech.sandbox.spring.cloud.microservices.customer.model;
 
 
+
 import br.com.healthtech.sandbox.spring.cloud.microservices.account.model.Account;
 
 import javax.persistence.Entity;

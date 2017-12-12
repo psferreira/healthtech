@@ -20,22 +20,7 @@
         <dependencies>
             <dependency>
                 <groupId>br.com.healthtech.sandbox</groupId>
-                <artifactId>sandbox-spring-cloud-microservices-customer-service</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>br.com.healthtech.sandbox</groupId>
                 <artifactId>sandbox-spring-cloud-microservices-account-service</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>br.com.healthtech.sandbox</groupId>
-                <artifactId>sandbox-spring-cloud-microservices-discovery-service</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>br.com.healthtech.sandbox</groupId>
-                <artifactId>sandbox-spring-cloud-microservices-gateway-service</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
         </dependencies>

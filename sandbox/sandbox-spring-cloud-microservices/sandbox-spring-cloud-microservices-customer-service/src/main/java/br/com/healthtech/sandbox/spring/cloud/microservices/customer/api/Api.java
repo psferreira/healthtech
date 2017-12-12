@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import br.com.healthtech.sandbox.spring.cloud.microservices.account.model.Account;
 import br.com.healthtech.sandbox.spring.cloud.microservices.customer.intercomm.AccountClient;
 import br.com.healthtech.sandbox.spring.cloud.microservices.customer.model.Customer;
 import br.com.healthtech.sandbox.spring.cloud.microservices.customer.repository.CustomerRepository;
-import br.com.healthtech.sandbox.spring.cloud.microservices.account.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
