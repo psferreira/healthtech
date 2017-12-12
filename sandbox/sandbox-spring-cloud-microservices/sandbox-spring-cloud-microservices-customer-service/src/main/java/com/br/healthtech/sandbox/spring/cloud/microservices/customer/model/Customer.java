@@ -1,31 +1,39 @@
 package com.br.healthtech.sandbox.spring.cloud.microservices.customer.model;
 
-import java.util.List;
+import com.br.healthtech.sandbox.spring.cloud.microservices.account.model.Account;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
 
-	private Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String pesel;
 	private String name;
 	private CustomerType type;
-	private List<Account> accounts;
+	private Account account;
 
 	public Customer() {
 		
 	}
 	
-	public Customer(Integer id, String pesel, String name, CustomerType type) {
+	public Customer(Long id, String pesel, String name, CustomerType type) {
 		this.id = id;
 		this.pesel = pesel;
 		this.name = name;
 		this.type = type;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -53,12 +61,11 @@ public class Customer {
 		this.type = type;
 	}
 
-	public List<Account> getAccounts() {
-		return accounts;
+	public Account getAccount() {
+		return account;
 	}
 
-	public void setAccounts(List<Account> accounts) {
-		this.accounts = accounts;
+	public void setAccount(Account account) {
+		this.account = account;
 	}
-
 }

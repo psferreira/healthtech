@@ -1,8 +1,16 @@
 package com.br.healthtech.sandbox.spring.cloud.microservices.account.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Account {
 
-	private Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private Integer customerId;
 	private String number;
 
@@ -10,17 +18,17 @@ public class Account {
 
 	}
 
-	public Account(Integer id, Integer customerId, String number) {
+	public Account(final Long id, final Integer customerId, final String number) {
 		this.id = id;
 		this.customerId = customerId;
 		this.number = number;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

@@ -16,4 +16,29 @@
         <module>sandbox-spring-cloud-microservices-gateway-service</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.br.healthtech.sandbox</groupId>
+                <artifactId>sandbox-spring-cloud-microservices-customer-service</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.br.healthtech.sandbox</groupId>
+                <artifactId>sandbox-spring-cloud-microservices-account-service</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.br.healthtech.sandbox</groupId>
+                <artifactId>sandbox-spring-cloud-microservices-discovery-service</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.br.healthtech.sandbox</groupId>
+                <artifactId>sandbox-spring-cloud-microservices-gateway-service</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>
