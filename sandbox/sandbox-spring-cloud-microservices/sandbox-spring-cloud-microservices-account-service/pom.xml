@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.br.healthtech.sandbox</groupId>
+        <groupId>br.com.healthtech.sandbox</groupId>
         <artifactId>sandbox-spring-cloud-microservices</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -39,7 +39,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.br.healthtech.sandbox.spring.cloud.microservices.account.Application</mainClass>
+                    <mainClass>br.com.healthtech.sandbox.spring.cloud.microservices.account.Application</mainClass>
                     <addResources>true</addResources>
                 </configuration>
                 <executions>
