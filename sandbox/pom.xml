@@ -9,12 +9,12 @@
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Brixton.RELEASE</version>
+        <version>Camden.SR7</version>
     </parent>
 
     <properties>
-        <spring.boot>1.4.2.RELEASE</spring.boot>
-        <spring.boot.eureka>1.2.2.RELEASE</spring.boot.eureka>
+        <spring.boot>2.0.0.M7</spring.boot>
+        <spring.boot.eureka>2.0.0.M7</spring.boot.eureka>
         <java.version>1.8</java.version>
     </properties>
 
