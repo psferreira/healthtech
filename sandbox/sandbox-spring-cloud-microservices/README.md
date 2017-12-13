@@ -34,13 +34,13 @@ Utilizamos Spring Boot para facilitar a criação e o arranque dos microserviço
 
 
 
-1. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-discovery-service/pom.xm ``
+1. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-discovery-service/pom.xml``
 
-2. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-account-service/pom.xm ``
+2. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-account-service/pom.xml``
 
-3. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-customer-service/pom.xm ``
+3. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-customer-service/pom.xml``
 
-4. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-gateway-service/pom.xm ``
+4. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-gateway-service/pom.xml``
 
 
 
