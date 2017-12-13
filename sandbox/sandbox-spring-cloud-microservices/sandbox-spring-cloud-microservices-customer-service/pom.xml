@@ -35,10 +35,6 @@
             <artifactId>postgresql</artifactId>
             <version>9.4-1206-jdbc42</version>
         </dependency>
-        <dependency>
-            <groupId>br.com.healthtech.sandbox</groupId>
-            <artifactId>sandbox-spring-cloud-microservices-account-service</artifactId>
-        </dependency>
     </dependencies>
 
     <build>

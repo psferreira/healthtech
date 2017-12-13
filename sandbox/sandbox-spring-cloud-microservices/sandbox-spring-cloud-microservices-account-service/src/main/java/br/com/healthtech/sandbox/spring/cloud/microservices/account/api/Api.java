@@ -41,8 +41,8 @@ public class Api {
 		return accountRepository.save(account);
 	}
 
-	@RequestMapping(value = "/accounts/customer/{customer}", method = RequestMethod.GET)
-	public Account findByCustomer(@PathVariable("customer") final Integer customerId) {
+	@RequestMapping(value = "/accounts/customer/{customerId}", method = RequestMethod.GET)
+	public Account findByCustomer(@PathVariable("customerId") final Integer customerId) {
 		logger.info(String.format("Account.findByCustomerId(%s)", customerId));
 		return accountRepository.findByCustomerId(customerId);
 	}

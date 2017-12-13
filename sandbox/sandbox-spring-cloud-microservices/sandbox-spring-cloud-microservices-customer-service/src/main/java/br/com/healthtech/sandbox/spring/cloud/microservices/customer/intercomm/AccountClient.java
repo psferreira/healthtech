@@ -1,6 +1,6 @@
 package br.com.healthtech.sandbox.spring.cloud.microservices.customer.intercomm;
 
-import br.com.healthtech.sandbox.spring.cloud.microservices.account.model.Account;
+import br.com.healthtech.sandbox.spring.cloud.microservices.customer.model.Account;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

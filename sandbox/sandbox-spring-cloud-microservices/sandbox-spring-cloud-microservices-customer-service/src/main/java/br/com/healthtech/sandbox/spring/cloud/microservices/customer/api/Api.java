@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import br.com.healthtech.sandbox.spring.cloud.microservices.account.model.Account;
 import br.com.healthtech.sandbox.spring.cloud.microservices.customer.intercomm.AccountClient;
+import br.com.healthtech.sandbox.spring.cloud.microservices.customer.model.Account;
 import br.com.healthtech.sandbox.spring.cloud.microservices.customer.model.Customer;
 import br.com.healthtech.sandbox.spring.cloud.microservices.customer.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,13 +34,9 @@ public class Api {
 	}
 	
 	@RequestMapping("/customers/accounts/{id}")
-	public Customer findByAccountId(@PathVariable("id") final Integer id) {
+	public Account findByAccountId(@PathVariable("id") final Integer id) {
 		logger.info(String.format("Customer.findByAccountId(%s)", id));
-		final List<Customer> customers = findAll();
-		final Customer customer = customers.stream().filter(it -> it.getId().intValue()==id.intValue()).findFirst().get();
-		final Account account =  accountClient.getAccount(id);
-		customer.setAccount(account);
-		return customer;
+		return accountClient.getAccount(id);
 	}
 
 	@RequestMapping("/customers/{id}")
