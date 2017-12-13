@@ -1,6 +1,6 @@
-## Arquitetura de microserviços: criando microserviços usando Spring Cloud, Eureka e Zuul
+# Arquitetura de microserviços: criando microserviços usando Spring Cloud, Eureka e Zuul
 
-# Arquitetura
+## Arquitetura
 
 
 
@@ -26,10 +26,58 @@ A imagem representa a arquitetura implementada. O cliente chama o endpoint dispo
 
 
 
-# Testar
+## Arranque
 
 
 
-`` mvn spring-boot:run -f sandbox-spring-cloud-microservices/sandbox-spring-cloud-microservices-discovery-service/pom.xm ``
+Utilizamos Spring Boot para facilitar a criação e o arranque dos microserviços de forma stand-alone. Para isso executar por ordem cada um dos seguintes comandos:
+
+
+
+1. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-discovery-service/pom.xm ``
+
+2. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-account-service/pom.xm ``
+
+3. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-customer-service/pom.xm ``
+
+4. ``mvn spring-boot:run -f sandbox-spring-cloud-microservices-gateway-service/pom.xm ``
+
+
+
+## Testar
+
+
+
+### Executar um POST para o recurso REST /accounts do serviço "account":
+
+``curl -H "Content-Type: application/json" -X POST -d '{"customerId": 229384,"number":"account_123434"}' http://localhost:8765/api/account/accounts``
+
+
+
+### Executar um GET para o recurso REST /accounts do serviço "account":
+
+``curl -H "Content-Type: application/json" -X GET http://localhost:8765/api/account/accounts/1``
+
+
+
+### Executar um POST para o recurso REST /customers do serviço "customer":
+
+``curl -H "Content-Type: application/json" -X POST -d '{ "pesel": "pesel_1232323", "name": "Customer Name", "type": "INDIVIDUAL", "account": { "customerId": 1, "number": "account_123" } }' http://localhost:8765/api/customer/customers``
+
+
+
+### Executar um GET para o recurso REST /customers do serviço "customer":
+
+``curl -H "Content-Type: application/json" -X GET http://localhost:8765/api/customer/customers/1``
+
+
+
+### Executar um GET para o recurso REST /customers/accounts do serviço "customer":
+
+``curl -H "Content-Type: application/json" -X GET http://localhost:8765/api/customer/customers/accounts/229384``
+
+
+
+
 
 
