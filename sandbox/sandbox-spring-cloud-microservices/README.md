@@ -1,31 +1,35 @@
-## Microservices Architecture Sandbox: Creating microservice using Spring Cloud, Eureka and Zuul
-
-
+## Arquitetura de microserviços: criando microserviços usando Spring Cloud, Eureka e Zuul
 
 # Arquitetura
 
 
 
-Spring framework provides set of libraries for creating microservices in Java. They are a part of Spring Cloud project. Today I’m going to show you how to create simple microservices using Spring Boot and following technologies:
+A Framework Spring fornece um conjunto de bibliotecas para criar microserviços em Java. Eles são uma parte do projeto Spring Cloud. Microserviços usando o Spring Boot e as seguintes tecnologias:
 
 
 
-**Zuul** –  gateway service that provides dynamic routing, monitoring, resiliency, security, and more
+**Zuul** –  serviço de gateway que fornece roteamento dinâmico, monitoramento, resiliência, segurança, ...
 
-**Ribbon** – client side load balancer
+**Ribbon** – balanceador de carga (client side)
 
-**Feign** – declarative REST client
+**Feign** – cliente declarativo REST
 
-**Eureka** – service registration and discovery
-
-
-
-Here’s picture with application architecture. Client calls endpoint available inside customer-service which stores basic customer data via Zuul gateway. This endpoint interacts with account-service to collect information about customer accounts served by endpoint in account-service. Each service registering itself on Eureka discovery service.
+**Eureka** – registro e descoberta de serviços
 
 
 
-![alt text](arch.png "Logo Title Text 1")
+A imagem representa a arquitetura implementada. O cliente chama o endpoint disponível dentro do serviço "customer" que armazena os dados básicos do cliente via Zuul gateway. Este endpoint interage com o serviço "account" para coletar informações sobre contas de clientes atendidas pelo endpoint do serviço "customer". Cada serviço se registra no serviço de descoberta Eureka automaticamente no arranque.
 
 
+
+![alt text](arch.png "Arquitetura microserviços implementada")
+
+
+
+# Testar
+
+
+
+`` mvn spring-boot:run -f sandbox-spring-cloud-microservices/sandbox-spring-cloud-microservices-discovery-service/pom.xm ``
 
 
